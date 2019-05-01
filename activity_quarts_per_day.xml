@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quartsPerDay">
+
+    <TextView
+        android:id="@+id/gPerDay_output"
+        android:layout_width="184dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/bbl_Name4"
+        app:layout_constraintTop_toBottomOf="@+id/qPerDay_output" />
+
+    <TextView
+        android:id="@+id/bbl_Name4"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/gall_day"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bbl_Name3" />
+
+    <TextView
+        android:id="@+id/bbl_Name3"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/quarts_day"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bbl_Name" />
+
+    <EditText
+        android:id="@+id/bbl_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/bbl_Name"
+        app:layout_constraintTop_toBottomOf="@+id/ppm_input" />
+
+    <TextView
+        android:id="@+id/title_quart_day"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:text="@string/chem_calc_title"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ppm_Name"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/ppm"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_quart_day" />
+
+    <EditText
+        android:id="@+id/ppm_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/ppm_Name"
+        app:layout_constraintTop_toBottomOf="@+id/title_quart_day" />
+
+    <TextView
+        android:id="@+id/bbl_Name"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/barrels_oil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppm_Name" />
+
+    <TextView
+        android:id="@+id/qPerDay_output"
+        android:layout_width="184dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/bbl_Name3"
+        app:layout_constraintTop_toBottomOf="@+id/bbl_input" />
+
+    <Button
+        android:id="@+id/calc_btn"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bbl_Name4" />
+
+    <Button
+        android:id="@+id/clear_btn"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="65dp"
+        android:text="@string/clear"
+        app:layout_constraintStart_toEndOf="@+id/calc_btn"
+        app:layout_constraintTop_toBottomOf="@+id/bbl_Name4" />
+
+</android.support.constraint.ConstraintLayout>
