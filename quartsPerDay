@@ -1,0 +1,79 @@
+package com.example.jacameq1;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class quartsPerDay extends AppCompatActivity {
+
+    //Declaring the variables needed
+    EditText ppm, bbl; //for the inputs
+    TextView qPerDay, gPerDay; //for the results
+    Button btnCalc; //calculate button
+    Button btnClear; //clear button
+
+    double ppm_num;
+    double bbl_num;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quarts_per_day);
+
+        //First get the variables for the xml to java using **findViewById**
+
+        //Inputs
+        ppm = findViewById(R.id.ppm_input);
+        bbl = findViewById(R.id.bbl_input);
+
+        //Results
+        qPerDay = findViewById(R.id.qPerDay_output);
+        gPerDay = findViewById(R.id.gPerDay_output);
+
+        //Buttons
+        btnCalc = findViewById(R.id.calc_btn);
+        btnClear = findViewById(R.id.clear_btn);
+
+        //setting the clear button to clear all entries
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //clearing entries
+                ppm.getText().clear(); bbl.getText().clear();
+                //clearing the outputs
+                TextView qPerDay = findViewById(R.id.qPerDay_output); qPerDay.setText(null);
+                TextView gPerDay = findViewById(R.id.gPerDay_output); gPerDay.setText(null);
+                //clearing the inputs
+                ppm.getText().clear(); bbl.getText().clear();
+            }
+        });
+
+        //calculate button
+        btnCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //convert the doubles to strings???
+                ppm_num = Double.parseDouble(ppm.getText().toString());
+                bbl_num = Double.parseDouble(bbl.getText().toString());
+
+                double concentration = 1000000;
+                double gPerDay_num = (ppm_num * bbl_num * 42) / concentration;
+                //the 42 is to convert from barrels oil to gallons
+
+                gPerDay.setText((Double.toString(gPerDay_num)));
+
+                //converting from Gal/day to gal per day
+                qPerDay.setText(Double.toString(gPerDay_num * 4));
+
+
+            }//onClick brace
+        });
+
+
+    }//onCreate brace
+}//class brace
