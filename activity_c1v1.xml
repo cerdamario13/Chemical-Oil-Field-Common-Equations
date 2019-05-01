@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".c1v1">
+
+    <TextView
+        android:id="@+id/formula_top"
+        android:layout_width="94dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginRight="161dp"
+        android:text="@string/c1v1_c2v2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ppm3_name"
+        android:layout_width="81dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/ppm3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formula_top" />
+
+    <EditText
+        android:id="@+id/ppm3_input"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/ppm3_name"
+        app:layout_constraintTop_toBottomOf="@+id/formula_top" />
+
+    <TextView
+        android:id="@+id/v13_name"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/v1"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppm3_name" />
+
+    <EditText
+        android:id="@+id/v13_input"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/v13_name"
+        app:layout_constraintTop_toBottomOf="@+id/ppm3_input" />
+
+    <TextView
+        android:id="@+id/v2_3name"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/v2_microL"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v13_name" />
+
+    <TextView
+        android:id="@+id/v2Micro_output"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@+id/v2_3name"
+        app:layout_constraintTop_toBottomOf="@+id/v13_input" />
+
+    <Button
+        android:id="@+id/calc3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/calculate"
+        android:enabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2Micro_output" />
+
+    <Button
+        android:id="@+id/clear3_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/clear3"
+        app:layout_constraintStart_toEndOf="@+id/calc3_button"
+        app:layout_constraintTop_toBottomOf="@+id/v2Micro_output" />
+
+    <TextView
+        android:id="@+id/v22_3name"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="45dp"
+        android:text="@string/v2_mill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2_3name" />
+
+    <TextView
+        android:id="@+id/v2Mili_output"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/v22_3name"
+        app:layout_constraintTop_toBottomOf="@+id/v2Micro_output" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/gal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v13_name" />
+
+</android.support.constraint.ConstraintLayout>
